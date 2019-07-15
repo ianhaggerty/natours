@@ -89,3 +89,6 @@ typings/
 
 # VSCode
 .DS_Store
+
+# Compiled CSs
+/css
