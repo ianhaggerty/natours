@@ -1,0 +1,23 @@
+{
+  "name": "starter",
+  "version": "1.0.0",
+  "description": "Landing page for natours",
+  "main": "index.js",
+  "scripts": {
+    "css": "node-sass sass/main.scss -o css",
+    "css:watch": "npm run css && node-sass sass/main.scss -wo css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ianhaggerty/natours.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ianhaggerty/natours/issues"
+  },
+  "homepage": "https://github.com/ianhaggerty/natours#readme",
+  "dependencies": {
+    "node-sass": "^4.12.0"
+  }
+}
