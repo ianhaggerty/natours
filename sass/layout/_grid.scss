@@ -1,35 +1,40 @@
-.row {
-  max-width: $grid-width;
-  background-color: #eee;
-  margin: 0 auto;
-  margin-bottom: $gutter-vertical;
+@function col-width($number, $span: 1) {
+  $base-width: ($grid-width + $gutter-horizontal) / $number;
+  @return $base-width * $span - $gutter-horizontal;
+}
 
-  &:not(:last-child) {
-    margin-bottom: $gutter-vertical;
-  }
-
-  @include clearfix;
-
-  .col {
-    background-color: desaturate(#ff0000, 40%);
-    float: left;
-    padding: 20px;
-    color: white;
-    font-size: 1.2rem;
+@for $i from 1 through 12 {
+  .row-#{$i} {
+    max-width: $grid-width;
+    background-color: #eee;
+    margin: 0 auto;
 
     &:not(:last-child) {
-      margin-right: $gutter-horizontal;
+      margin-bottom: $gutter-vertical;
     }
 
-    &.col-1-of-2,
-    &.col-2-of-2 {
-      width: ($grid-width - $gutter-horizontal) / 2;
+    @include clearfix;
+
+    .col {
+      width: col-width($i);
     }
 
-    &.col-1-of-3,
-    &.col-2-of-3,
-    &.col-3-of-3 {
-      width: ($grid-width - $gutter-horizontal * 2) / 3;
+    @for $j from 1 through 12 {
+      .col.span-#{$j} {
+        width: col-width($i, $j);
+      }
     }
+  }
+}
+
+.col {
+  background-color: desaturate(#ff0000, 40%);
+  float: left;
+  padding: 20px;
+  color: white;
+  font-size: 1.2rem;
+
+  &:not(:last-child) {
+    margin-right: $gutter-horizontal;
   }
 }
