@@ -24,6 +24,20 @@
 
 .section-tours {
   background-color: $color-grey-light;
-  padding: 25rem 0 50rem 0;
+  padding: 25rem 0 10rem 0;
   margin-top: -10rem;
+}
+
+.section-stories {
+  padding: 15rem 0;
+  position: relative;
+}
+
+.section-book {
+  padding: 15rem 0;
+  background-image: linear-gradient(
+    to right bottom,
+    $color-primary-light,
+    $color-primary-dark
+  );
 }
