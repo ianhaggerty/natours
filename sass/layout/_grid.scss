@@ -10,6 +10,14 @@
 
     &:not(:last-child) {
       margin-bottom: $gutter-vertical;
+
+      @include respond(tab-port) {
+        margin-bottom: $gutter-vertical-small;
+      }
+    }
+
+    @include respond(tab-port) {
+      max-width: 50rem;
     }
 
     @include clearfix;
@@ -19,6 +27,10 @@
       width: calc(
         (100% + #{$gutter-horizontal}) / #{$i} - #{$gutter-horizontal}
       );
+
+      @include respond(tab-port) {
+        width: 100% !important;
+      }
     }
 
     @for $j from 1 through 12 {
@@ -37,15 +49,4 @@
   &:not(:last-child) {
     margin-right: $gutter-horizontal;
   }
-}
-
-@mixin row-test {
-  background-color: #eee;
-}
-
-@mixin col-test {
-  background-color: desaturate(#ff0000, 40%);
-  font-size: 1.2rem;
-  padding: 20px;
-  color: white;
 }
