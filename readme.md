@@ -1,4 +1,4 @@
-## Trillo
+## Natours
 
 Well, hello there! 👋
 
@@ -11,7 +11,6 @@ Thanks for visiting the repository. This is a little page put together to demons
 ![1](./docs/images/3.png)
 ![1](./docs/images/4.png)
 ![1](./docs/images/5.png)
-![1](./docs/images/6.png)
 
 ## Usage
 
